@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Richa & Rahul — Wedding Invitation</title>
+  <meta name="description" content="You are cordially invited to celebrate the wedding reception of Richa and Rahul. November 21, 2026." />
+  
+  <!-- Google Fonts: Script, Serif, and Clean Accent typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons for elegant icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       FULL-SCREEN INTERACTIVE INTRO VIDEO GATE
+       ======================================================== -->
+  <div id="videoIntroOverlay" class="video-intro-overlay" role="dialog" aria-label="Wedding Invitation Intro Video">
+    <!-- HTML5 Video Player -->
+    <video id="introVideo" class="intro-video" playsinline preload="auto" muted>
+      <source src="https://www.image2url.com/r2/default/videos/1792828665696-12e15a13-2b66-4402-8930-fdead76a10ae.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <!-- Floating Audio & Ambient Controls -->
+  <div class="floating-controls" aria-label="Audio and Effects Controls">
+    <button id="musicToggleBtn" class="control-btn" title="Play / Pause Romantic Music" aria-label="Toggle background music">
+      <i class="fa-solid fa-music"></i>
+      <span class="btn-label">Music</span>
+    </button>
+    <button id="heartsToggleBtn" class="control-btn" title="Toggle Floating Hearts" aria-label="Toggle floating hearts">
+      <i class="fa-solid fa-heart"></i>
+      <span class="btn-label">Hearts</span>
+    </button>
+  </div>
+
+  <!-- Romantic Background Music Audio Player -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://www.image2url.com/r2/default/audio/1793018246917-d463b8af-6b9b-4ad8-ba32-aea7f2ba1a23.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Floating Hearts Container -->
+  <div id="heartsContainer" class="hearts-container" aria-hidden="true"></div>
+
+  <!-- ========================================================
+       SECTION 1: HERO SECTION (TOP)
+       ======================================================== -->
+  <header id="hero" class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content">
+      <!-- Monogram Crest with R & R -->
+      <div class="monogram-crest" aria-hidden="true">
+        <svg viewBox="0 0 100 100" class="crest-svg">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="url(#roseGoldGrad)" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <circle cx="50" cy="50" r="41" fill="none" stroke="url(#roseGoldGrad)" stroke-width="1"/>
+          <!-- Ornate Filigree Crown Top -->
+          <path d="M40 32 L50 22 L60 32 L56 36 L50 28 L44 36 Z" fill="url(#roseGoldGrad)"/>
+          <text x="50" y="58" text-anchor="middle" font-family="'Great Vibes', cursive" font-size="28" fill="url(#roseGoldGrad)">R &amp; R</text>
+          <defs>
+            <linearGradient id="roseGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ECC4B2"/>
+              <stop offset="35%" stop-color="#D49A89"/>
+              <stop offset="70%" stop-color="#B76E79"/>
+              <stop offset="100%" stop-color="#E8B4A2"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Subtext 1 -->
+      <p class="hero-subtext uppercase-track">We're getting married</p>
+
+      <!-- Couple Names in Large Script -->
+      <h1 class="couple-names">Richa &amp; Rahul</h1>
+
+      <!-- Subtext 2 -->
+      <p class="hero-invitation-subtext">Request the honour of your presence</p>
+
+      <!-- Royal Divider -->
+      <div class="royal-flourish-divider" aria-hidden="true">
+        <span class="flourish-line"></span>
+        <i class="fa-solid fa-heart flourish-icon"></i>
+        <span class="flourish-line"></span>
+      </div>
+    </div>
+
+    <!-- Animated Scroll Down Indicator at bottom -->
+    <a href="#welcome" class="scroll-down-wrapper" aria-label="Scroll Down to Welcome Section">
+      <span class="scroll-down-text">Scroll Down</span>
+      <div class="bouncing-arrow">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </a>
+  </header>
+
+  <!-- ========================================================
+       SECTION 2: CUSTOM WELCOME SECTION
+       (Soft solid blush background #FDF3F4)
+       ======================================================== -->
+  <section id="welcome" class="welcome-section">
+    <div class="container">
+      <div class="welcome-card royal-card reveal-fade">
+        <!-- Subtle Floral Corner Accents -->
+        <div class="corner-accent corner-top-left" aria-hidden="true"></div>
+        <div class="corner-accent corner-top-right" aria-hidden="true"></div>
+        <div class="corner-accent corner-bottom-left" aria-hidden="true"></div>
+        <div class="corner-accent corner-bottom-right" aria-hidden="true"></div>
+
+        <!-- Rose Gold Heading -->
+        <h2 class="section-title rose-gold-text reveal-on-scroll">Welcome to Our Beginning</h2>
+        <div class="sub-flourish reveal-on-scroll delay-1">❧ ❦ ☙</div>
+
+        <!-- Short Elegant Paragraph -->
+        <p class="welcome-paragraph reveal-on-scroll delay-1">
+          <span style="display: block; font-style: italic; margin-bottom: 16px;">“Two hearts, two lives, united forever in love.”</span>
+          As we begin our journey of forever, we warmly invite our beloved family and friends to bless us with their presence, love, and laughter as we exchange vows under the starlight and celebrate our beautiful new beginning.
+        </p>
+
+        <div class="welcome-signature reveal-on-scroll delay-2">
+          <span>With all our love,</span>
+          <p class="signature-names">Richa &amp; Rahul</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 3: SCRATCH TO REVEAL / THE DATE SECTION
+       ======================================================== -->
+  <section id="the-date" class="date-section">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <h2 class="section-title main-heading">You're Invited!</h2>
+        <p class="section-desc">Scratch the rose gold foil below to unveil our <strong>Wedding Reception Day</strong>, or tap to reveal instantly.</p>
+      </div>
+
+      <!-- Scratch Card Component -->
+      <div class="scratch-wrapper reveal-fade delay-1">
+        <div class="scratch-card" id="scratchCard">
+          <!-- Hidden Revealed Layer beneath -->
+          <div class="scratch-underlayer" id="scratchUnderlayer">
+            <!-- Royal Header Badge -->
+            <div class="revealed-badge">
+              The Wedding Reception
+            </div>
+
+            <!-- Unique Royal Date Crest (Clickable Calendar) -->
+            <div class="revealed-date-crest" id="revealedDateCrest" role="button" tabindex="0" title="Click to add wedding to your phone or laptop calendar" aria-label="Saturday, November 21, 2026 at 06:30 PM. Click to add to calendar">
+              <!-- Day with Winged Lines -->
+              <div class="date-crest-day">
+                <span class="crest-line"></span>
+                <span class="day-text">✦ Saturday ✦</span>
+                <span class="crest-line"></span>
+              </div>
+
+              <!-- Trio: Month • Large Halo 21 • Year -->
+              <div class="date-trio-display">
+                <div class="date-col month-col">
+                  <span class="date-col-label">Month</span>
+                  <span class="date-col-value">November</span>
+                </div>
+
+                <div class="date-col day-num-col">
+                  <div class="day-num-halo">
+                    <div class="day-num-wrap">
+                      <span class="day-number">21</span>
+                      <span class="day-suffix">st</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="date-col year-col">
+                  <span class="date-col-label">Year</span>
+                  <span class="date-col-value">2026</span>
+                </div>
+              </div>
+
+
+
+              <!-- Time & Auspicious Evening Capsule -->
+              <div class="revealed-time-pill">
+                <i class="fa-regular fa-clock"></i>
+                <span class="time-main">06:30 PM</span>
+                <span class="time-divider">|</span>
+                <span class="time-desc">In the Auspicious Evening</span>
+              </div>
+
+              <!-- Meaningful Love Motto -->
+              <p class="revealed-promise-tag">
+                &ldquo;Together with our families, we begin our forever&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <!-- HTML5 Canvas Foil Cover -->
+          <canvas id="scratchCanvas" width="480" height="340" aria-label="Interactive scratch card: scratch with mouse or finger to reveal wedding date"></canvas>
+        </div>
+
+        <!-- Accessible & Fast Controls -->
+        <div class="scratch-controls">
+          <button id="revealAllBtn" class="btn btn-reveal-toggle" aria-label="Reveal Date instantly">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Reveal Date Instantly
+          </button>
+          <span class="scratch-hint"><i class="fa-solid fa-hand-pointer"></i> Drag your finger or mouse over the foil to scratch!</span>
+
+          <!-- Save The Date Royal Component (Outside below Date Revealed) -->
+          <div class="save-the-date-royal-wrapper" id="saveTheDateWrapper">
+            <button type="button" class="btn-save-the-date-royal" id="saveTheDateToggleBtn" aria-expanded="false" aria-controls="calendarDropdownCard">
+              <i class="fa-regular fa-calendar-check"></i> Mark The Date <i class="fa-solid fa-chevron-down toggle-arrow"></i>
+            </button>
+
+            <div class="calendar-dropdown-card is-collapsed" id="calendarDropdownCard" role="region" aria-label="Calendar Options">
+              <ul class="calendar-options-list">
+                <li>
+                  <a href="#" id="calOptGoogle" target="_blank" rel="noopener noreferrer" class="calendar-option-item">
+                    <span class="cal-opt-icon"><i class="fa-brands fa-google"></i></span>
+                    <span class="cal-opt-text">Google Calendar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="calOptOutlook" target="_blank" rel="noopener noreferrer" class="calendar-option-item">
+                    <span class="cal-opt-icon"><i class="fa-brands fa-microsoft"></i></span>
+                    <span class="cal-opt-text">Office 365 / Outlook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="calOptYahoo" target="_blank" rel="noopener noreferrer" class="calendar-option-item">
+                    <span class="cal-opt-icon"><i class="fa-brands fa-yahoo"></i></span>
+                    <span class="cal-opt-text">Yahoo Calendar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="calOptApple" class="calendar-option-item">
+                    <span class="cal-opt-icon"><i class="fa-brands fa-apple"></i></span>
+                    <span class="cal-opt-text">Apple Calendar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="calOptIcs" class="calendar-option-item">
+                    <span class="cal-opt-icon"><i class="fa-regular fa-calendar-plus"></i></span>
+                    <span class="cal-opt-text">Other (.ics file)</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="calendar-card-footer">
+                <span>Add this event to your calendar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 4: COUNTDOWN TIMER
+       ======================================================== -->
+  <section id="countdown" class="countdown-section">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <p class="section-eyebrow">Awaiting Our Forever</p>
+        <h2 class="section-title rose-gold-text">Counting Down the Moments</h2>
+        <div class="royal-flourish-divider">
+          <span class="flourish-line"></span>
+          <i class="fa-solid fa-heart flourish-icon"></i>
+          <span class="flourish-line"></span>
+        </div>
+      </div>
+
+      <!-- Live Countdown Grid -->
+      <div class="countdown-grid" id="countdownGrid" role="timer" aria-live="polite">
+        <div class="countdown-unit-card reveal-on-scroll delay-1">
+          <div class="unit-box">
+            <span class="unit-number" id="cdDays">00</span>
+          </div>
+          <span class="unit-label">Days</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-unit-card reveal-on-scroll delay-2">
+          <div class="unit-box">
+            <span class="unit-number" id="cdHours">00</span>
+          </div>
+          <span class="unit-label">Hours</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-unit-card reveal-on-scroll delay-3">
+          <div class="unit-box">
+            <span class="unit-number" id="cdMinutes">00</span>
+          </div>
+          <span class="unit-label">Minutes</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-unit-card reveal-on-scroll delay-4">
+          <div class="unit-box">
+            <span class="unit-number" id="cdSeconds">00</span>
+          </div>
+          <span class="unit-label">Seconds</span>
+        </div>
+      </div>
+
+      <p class="countdown-note reveal-on-scroll delay-4">Until we declare our love before God and our dearest guests.</p>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 5: PROGRAM TIMELINE (EVENTS)
+       ======================================================== -->
+  <section id="timeline" class="timeline-section">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <p class="section-eyebrow">The Order of Celebration</p>
+        <h2 class="section-title main-heading">Program Timeline</h2>
+        <p class="section-desc">Saturday, November 21, 2026 &bull; An unforgettable evening of joy</p>
+        <div class="sub-flourish reveal-on-scroll delay-1">❧ ❦ ☙</div>
+        <div class="timeline-interactive-hint reveal-on-scroll delay-2" aria-hidden="true">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Tap any milestone to celebrate with sparkles &amp; details
+        </div>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Animated Central Spine with Scroll Progress & Traveling Light Pulse -->
+        <div class="timeline-central-spine" aria-hidden="true">
+          <div class="timeline-spine-pulse"></div>
+          <div class="timeline-spine-fill"></div>
+          <div class="timeline-spine-head">
+            <span class="spine-sparkle-dot">✦</span>
+          </div>
+        </div>
+
+        <!-- Event 1: Warm Welcome of Guests -->
+        <div class="timeline-item left reveal-left delay-1" data-event-index="1" data-event-title="Warm Welcome of Guests" data-event-time="06:30 PM">
+          <div class="timeline-marker" aria-hidden="true">
+            <i class="fa-solid fa-hands-praying"></i>
+          </div>
+          <div class="timeline-card royal-card" tabindex="0" role="button" aria-label="Milestone: Warm Welcome of Guests at 06:30 PM">
+            <span class="timeline-tap-sparkle" title="Tap to celebrate" aria-hidden="true"><i class="fa-solid fa-sparkles"></i></span>
+            <div class="timeline-meta">
+              <span class="timeline-time"><span class="timeline-status-dot"></span><i class="fa-regular fa-clock"></i> 06:30 PM</span>
+              <span class="timeline-date">Nov 21, 2026</span>
+            </div>
+            <h3 class="timeline-title">Warm Welcome of Guests</h3>
+            <p class="timeline-desc">Join us as we gather with love to welcome our dearest family and friends.</p>
+            <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> The Welcome Lawn, Baig Farms</span>
+          </div>
+        </div>
+
+        <!-- Event 2: Ceremony Begins -->
+        <div class="timeline-item right reveal-right delay-2" data-event-index="2" data-event-title="Ceremony Begins" data-event-time="07:00 PM">
+          <div class="timeline-marker" aria-hidden="true">
+            <i class="fa-solid fa-ring"></i>
+          </div>
+          <div class="timeline-card royal-card highlight-event" tabindex="0" role="button" aria-label="Milestone: Ceremony Begins at 07:00 PM">
+            <span class="timeline-tap-sparkle" title="Tap to celebrate" aria-hidden="true"><i class="fa-solid fa-sparkles"></i></span>
+            <div class="badge-ceremony"><i class="fa-solid fa-sparkles"></i> Auspicious Ceremony</div>
+            <div class="timeline-meta">
+              <span class="timeline-time"><span class="timeline-status-dot"></span><i class="fa-regular fa-clock"></i> 07:00 PM</span>
+              <span class="timeline-date">Nov 21, 2026</span>
+            </div>
+            <h3 class="timeline-title">Ceremony Begins</h3>
+            <p class="timeline-desc">With your blessings, let the auspicious celebration begin.</p>
+            <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> The Grand Mandap, Baig Farms</span>
+          </div>
+        </div>
+
+        <!-- Event 3: Dinner & Fellowship -->
+        <div class="timeline-item left reveal-left delay-3" data-event-index="3" data-event-title="Dinner &amp; Fellowship" data-event-time="08:30 PM Onwards">
+          <div class="timeline-marker" aria-hidden="true">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="timeline-card royal-card" tabindex="0" role="button" aria-label="Milestone: Dinner & Fellowship at 08:30 PM Onwards">
+            <span class="timeline-tap-sparkle" title="Tap to celebrate" aria-hidden="true"><i class="fa-solid fa-sparkles"></i></span>
+            <div class="timeline-meta">
+              <span class="timeline-time"><span class="timeline-status-dot"></span><i class="fa-regular fa-clock"></i> 08:30 PM Onwards</span>
+              <span class="timeline-date">Nov 21, 2026</span>
+            </div>
+            <h3 class="timeline-title">Dinner &amp; Fellowship</h3>
+            <p class="timeline-desc">Celebrate with a grand royal feast, shared laughter, heartfelt conversations, and cherished blessings for the newlyweds.</p>
+            <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> The Royal Banquet Lawn, Baig Farms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 6: VENUE & RESIDENCE
+       ======================================================== -->
+  <section id="venue" class="venue-section">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <p class="section-eyebrow">Locations &amp; Directions</p>
+        <h2 class="section-title rose-gold-text">Venues &amp; Residence</h2>
+        <div class="royal-flourish-divider">
+          <span class="flourish-line"></span>
+          <i class="fa-solid fa-house-chimney-heart flourish-icon"></i>
+          <span class="flourish-line"></span>
+        </div>
+      </div>
+
+      <div class="venue-grid">
+        <!-- Main Venue Card -->
+        <div class="venue-card royal-card reveal-left delay-1">
+          <div class="card-badge"><i class="fa-solid fa-tree"></i> Wedding Reception Venue</div>
+          <h3 class="venue-name">Baig Farms &amp; Resort (Zootopia)</h3>
+          <p class="venue-address">
+            <i class="fa-solid fa-location-dot address-icon"></i>
+            Pithasur Plot no 29, Pithesur, Godhani (Railway), Maharashtra 441501
+          </p>
+          <p class="venue-desc">
+            Surrounded by lush green tranquility, Baig Farms &amp; Resort (Zootopia) offers an exquisite countryside venue featuring grand banquet lawns, picturesque landscapes, and spacious parking for our grand celebration.
+          </p>
+          <div class="venue-features">
+            <span class="feature-tag"><i class="fa-solid fa-square-parking"></i> Ample Parking</span>
+            <span class="feature-tag"><i class="fa-solid fa-wheelchair"></i> Fully Accessible</span>
+            <span class="feature-tag"><i class="fa-solid fa-seedling"></i> Lush Scenic Lawns</span>
+          </div>
+
+          <!-- Interactive Embedded Google Map -->
+          <div class="map-embed-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=Baig+Farms+%26+Resort+Zootopia+Pithasur+Plot+no+29+Godhani+Maharashtra+441501&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+              class="map-embed-frame" 
+              loading="lazy" 
+              title="Google Map: Baig Farms &amp; Resort (Zootopia)" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Baig+Farms+%26+Resort+Zootopia+Pithasur+Plot+no+29+Godhani+Maharashtra+441501" target="_blank" rel="noopener noreferrer" class="btn btn-rosegold-solid full-width-btn">
+            <i class="fa-solid fa-map-location-dot"></i> View on Google Maps
+          </a>
+        </div>
+
+        <!-- Family Residence (Home) Card -->
+        <div class="residence-card royal-card reveal-right delay-2">
+          <div class="card-badge"><i class="fa-solid fa-house-chimney-heart"></i> Family Residence (Home)</div>
+          <h3 class="venue-name">Rosa Mystica Family Residence</h3>
+          <p class="venue-address">
+            <i class="fa-solid fa-location-dot address-icon"></i>
+            Plot No 1, House No 7, Rosa Mystica, Opposite Madhur Heights, Zingabai Takli, Godhani Road, Nagpur
+          </p>
+          <p class="venue-desc">
+            Join us at our family residence for traditional blessings, family gatherings, tea, and heartfelt moments ahead of the celebrations.
+          </p>
+          <div class="venue-features">
+            <span class="feature-tag"><i class="fa-solid fa-heart"></i> Warm Welcome</span>
+            <span class="feature-tag"><i class="fa-solid fa-mug-hot"></i> Tea &amp; Blessings</span>
+            <span class="feature-tag"><i class="fa-solid fa-door-open"></i> Family Hospitality</span>
+          </div>
+
+          <!-- Interactive Embedded Google Map -->
+          <div class="map-embed-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=21.196158,79.0645635&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+              class="map-embed-frame" 
+              loading="lazy" 
+              title="Google Map: Rosa Mystica Family Residence" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <a href="https://www.google.com/maps/place/21%C2%B011'46.2%22N+79%C2%B003'52.4%22E/@21.1961619,79.0645586,326a,90y,170.61h,97.17t/data=!3m7!1e1!3m5!1sUPgHU-3O27Rmcyyd2IIF3A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-7.173025870475499%26panoid%3DUPgHU-3O27Rmcyyd2IIF3A%26yaw%3D170.61199020962636!7i16384!8i8192!4m4!3m3!8m2!3d21.1961667!4d79.0645556?hl=en&amp;entry=ttu&amp;g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn btn-rosegold-solid full-width-btn" id="homeMapsBtn">
+            <i class="fa-solid fa-map-pin"></i> View Home on Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 7: RSVP SECTION (BOTTOM)
+       ======================================================== -->
+  <section id="rsvp" class="rsvp-section">
+    <div class="container">
+      <div class="rsvp-wrapper royal-card reveal-fade">
+        <!-- Corner Accents -->
+        <div class="corner-accent corner-top-left" aria-hidden="true"></div>
+        <div class="corner-accent corner-top-right" aria-hidden="true"></div>
+        <div class="corner-accent corner-bottom-left" aria-hidden="true"></div>
+        <div class="corner-accent corner-bottom-right" aria-hidden="true"></div>
+
+        <div class="section-header text-center reveal-on-scroll">
+          <p class="section-eyebrow">Kindly Respond</p>
+          <h2 class="section-title rose-gold-text">R.S.V.P.</h2>
+          <p class="rsvp-deadline">Please respond on or before <strong>November 15, 2026</strong> so we can prepare your seat.</p>
+          <div class="sub-flourish reveal-on-scroll delay-1">❧ ❦ ☙</div>
+        </div>
+
+        <!-- RSVP Form -->
+        <form id="rsvpForm" class="rsvp-form reveal-on-scroll delay-1" novalidate>
+          <div class="form-grid">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="fullName" class="form-label">Full Name <span class="required-star">*</span></label>
+              <div class="input-container">
+                <i class="fa-regular fa-user form-icon"></i>
+                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="" required />
+              </div>
+              <span class="field-error" id="fullNameError"></span>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="emailAddress" class="form-label">Email Address <span class="required-star">*</span></label>
+              <div class="input-container">
+                <i class="fa-regular fa-envelope form-icon"></i>
+                <input type="email" id="emailAddress" name="emailAddress" class="form-input" placeholder="" required />
+              </div>
+              <span class="field-error" id="emailAddressError"></span>
+            </div>
+
+            <!-- Attendance Status Dropdown -->
+            <div class="form-group">
+              <label for="attendanceStatus" class="form-label">Will You Attend? <span class="required-star">*</span></label>
+              <div class="input-container">
+                <i class="fa-regular fa-circle-check form-icon"></i>
+                <select id="attendanceStatus" name="attendanceStatus" class="form-select" required>
+                  <option value="" disabled selected>Select Attendance...</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+              <span class="field-error" id="attendanceStatusError"></span>
+            </div>
+
+            <!-- Number of Guests -->
+            <div class="form-group">
+              <label for="guestCount" class="form-label">Total Number of Guests Attending</label>
+              <div class="input-container">
+                <i class="fa-solid fa-users form-icon"></i>
+                <select id="guestCount" name="guestCount" class="form-select">
+                  <option value="1">1 Person (Myself)</option>
+                  <option value="2" selected>2 Persons (Myself &amp; Plus One)</option>
+                  <option value="3">3 Persons</option>
+                  <option value="4">4 Persons</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dietary Preferences -->
+          <div class="form-group full-width">
+            <label for="dietaryPreferences" class="form-label">Dietary Preferences</label>
+            <div class="input-container">
+              <i class="fa-solid fa-utensils form-icon"></i>
+              <select id="dietaryPreferences" name="dietaryPreferences" class="form-select">
+                <option value="" disabled selected>Select Dietary Preference...</option>
+                <option value="Veg">Veg</option>
+                <option value="Non-Veg">Non-Veg</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message Box -->
+          <div class="form-group full-width">
+            <label for="messageBox" class="form-label">Message for the Couple</label>
+            <div class="input-container textarea-container">
+              <i class="fa-regular fa-comment-dots form-icon textarea-icon"></i>
+              <textarea id="messageBox" name="messageBox" class="form-textarea" rows="4" placeholder="Write your heartfelt wishes, song requests, or warm blessings here..."></textarea>
+            </div>
+          </div>
+
+          <!-- Solid Rose Gold Submit Button -->
+          <div class="form-submit-container text-center">
+            <button type="submit" id="submitRsvpBtn" class="btn btn-rosegold-solid btn-large">
+              <span class="btn-text">Send Message</span>
+              <i class="fa-regular fa-paper-plane btn-icon"></i>
+            </button>
+            <p class="submit-disclaimer">We cannot wait to celebrate this magical milestone with you!</p>
+          </div>
+        </form>
+
+        <!-- RSVP Confirmation Modal State -->
+        <div id="rsvpSuccessCard" class="rsvp-success-card hidden" role="alert">
+          <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3 class="success-title rose-gold-text">Thank You for Your RSVP!</h3>
+          <p class="success-message" id="successMessageText">
+            Your response has been warmly recorded. We are thrilled to celebrate with you on November 21, 2026.
+          </p>
+          <div class="submitted-details" id="submittedDetailsBox"></div>
+          <button id="resetRsvpBtn" class="btn btn-outline-rosegold">Submit Another Response</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="royal-footer">
+    <div class="container text-center reveal-on-scroll">
+      <div class="footer-monogram">R &amp; R</div>
+      <p class="footer-names">Richa &amp; Rahul</p>
+      <p class="footer-hashtag">#RichaAndRahul2026</p>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">Copyright &copy; 2026 Rahul.com. All Rights Reserved.</p>
+      <p class="footer-disclaimer">All individual works are copyright protected by their respective owners &amp; contributors.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="toast-notification hidden" role="status" aria-live="polite"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
