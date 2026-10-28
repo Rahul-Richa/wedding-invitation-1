@@ -479,120 +479,216 @@
   <!-- ========================================================
        SECTION 7: RSVP SECTION (BOTTOM)
        ======================================================== -->
-  <section id="rsvp" class="rsvp-section">
-    <div class="container">
-      <div class="rsvp-wrapper royal-card reveal-fade">
-        <!-- Corner Accents -->
-        <div class="corner-accent corner-top-left" aria-hidden="true"></div>
-        <div class="corner-accent corner-top-right" aria-hidden="true"></div>
-        <div class="corner-accent corner-bottom-left" aria-hidden="true"></div>
-        <div class="corner-accent corner-bottom-right" aria-hidden="true"></div>
+<!-- RSVP FORM -->
+<section id="rsvp" class="rsvp-section">
+  <div class="container">
+    <div class="rsvp-wrapper royal-card">
 
-        <div class="section-header text-center reveal-on-scroll">
-          <p class="section-eyebrow">Kindly Respond</p>
-          <h2 class="section-title rose-gold-text">R.S.V.P.</h2>
-          <p class="rsvp-deadline">Please respond on or before <strong>November 15, 2026</strong> so we can prepare your seat.</p>
-          <div class="sub-flourish reveal-on-scroll delay-1">❧ ❦ ☙</div>
-        </div>
-
-        <!-- RSVP Form -->
-        <form id="rsvpForm" class="rsvp-form reveal-on-scroll delay-1" novalidate>
-          <div class="form-grid">
-            <!-- Full Name -->
-            <div class="form-group">
-              <label for="fullName" class="form-label">Full Name <span class="required-star">*</span></label>
-              <div class="input-container">
-                <i class="fa-regular fa-user form-icon"></i>
-                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="" required />
-              </div>
-              <span class="field-error" id="fullNameError"></span>
-            </div>
-
-            <!-- Email Address -->
-            <div class="form-group">
-              <label for="emailAddress" class="form-label">Email Address <span class="required-star">*</span></label>
-              <div class="input-container">
-                <i class="fa-regular fa-envelope form-icon"></i>
-                <input type="email" id="emailAddress" name="emailAddress" class="form-input" placeholder="" required />
-              </div>
-              <span class="field-error" id="emailAddressError"></span>
-            </div>
-
-            <!-- Attendance Status Dropdown -->
-            <div class="form-group">
-              <label for="attendanceStatus" class="form-label">Will You Attend? <span class="required-star">*</span></label>
-              <div class="input-container">
-                <i class="fa-regular fa-circle-check form-icon"></i>
-                <select id="attendanceStatus" name="attendanceStatus" class="form-select" required>
-                  <option value="" disabled selected>Select Attendance...</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-              </div>
-              <span class="field-error" id="attendanceStatusError"></span>
-            </div>
-
-            <!-- Number of Guests -->
-            <div class="form-group">
-              <label for="guestCount" class="form-label">Total Number of Guests Attending</label>
-              <div class="input-container">
-                <i class="fa-solid fa-users form-icon"></i>
-                <select id="guestCount" name="guestCount" class="form-select">
-                  <option value="1">1 Person (Myself)</option>
-                  <option value="2" selected>2 Persons (Myself &amp; Plus One)</option>
-                  <option value="3">3 Persons</option>
-                  <option value="4">4 Persons</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dietary Preferences -->
-          <div class="form-group full-width">
-            <label for="dietaryPreferences" class="form-label">Dietary Preferences</label>
-            <div class="input-container">
-              <i class="fa-solid fa-utensils form-icon"></i>
-              <select id="dietaryPreferences" name="dietaryPreferences" class="form-select">
-                <option value="" disabled selected>Select Dietary Preference...</option>
-                <option value="Veg">Veg</option>
-                <option value="Non-Veg">Non-Veg</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Message Box -->
-          <div class="form-group full-width">
-            <label for="messageBox" class="form-label">Message for the Couple</label>
-            <div class="input-container textarea-container">
-              <i class="fa-regular fa-comment-dots form-icon textarea-icon"></i>
-              <textarea id="messageBox" name="messageBox" class="form-textarea" rows="4" placeholder="Write your heartfelt wishes, song requests, or warm blessings here..."></textarea>
-            </div>
-          </div>
-
-          <!-- Solid Rose Gold Submit Button -->
-          <div class="form-submit-container text-center">
-            <button type="submit" id="submitRsvpBtn" class="btn btn-rosegold-solid btn-large">
-              <span class="btn-text">Send Message</span>
-              <i class="fa-regular fa-paper-plane btn-icon"></i>
-            </button>
-            <p class="submit-disclaimer">We cannot wait to celebrate this magical milestone with you!</p>
-          </div>
-        </form>
-
-        <!-- RSVP Confirmation Modal State -->
-        <div id="rsvpSuccessCard" class="rsvp-success-card hidden" role="alert">
-          <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
-          <h3 class="success-title rose-gold-text">Thank You for Your RSVP!</h3>
-          <p class="success-message" id="successMessageText">
-            Your response has been warmly recorded. We are thrilled to celebrate with you on November 21, 2026.
-          </p>
-          <div class="submitted-details" id="submittedDetailsBox"></div>
-          <button id="resetRsvpBtn" class="btn btn-outline-rosegold">Submit Another Response</button>
-        </div>
+      <div class="section-header text-center">
+        <p class="section-eyebrow">Kindly Respond</p>
+        <h2 class="section-title rose-gold-text">R.S.V.P.</h2>
+        <p class="rsvp-deadline">
+          Please respond on or before
+          <strong>November 15, 2026</strong>
+        </p>
       </div>
-    </div>
-  </section>
 
+      <form id="rsvpForm" class="rsvp-form">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              class="form-input"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="emailAddress">Email Address *</label>
+            <input
+              type="email"
+              id="emailAddress"
+              name="emailAddress"
+              class="form-input"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="attendanceStatus">Will You Attend? *</label>
+            <select
+              id="attendanceStatus"
+              name="attendanceStatus"
+              class="form-select"
+              required
+            >
+              <option value="">Select Attendance</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="guestCount">Total Number of Guests</label>
+            <select
+              id="guestCount"
+              name="guestCount"
+              class="form-select"
+            >
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 Persons</option>
+              <option value="3">3 Persons</option>
+              <option value="4">4 Persons</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="dietaryPreferences">
+            Dietary Preferences
+          </label>
+          <select
+            id="dietaryPreferences"
+            name="dietaryPreferences"
+            class="form-select"
+          >
+            <option value="">Select Preference</option>
+            <option value="Veg">Veg</option>
+            <option value="Non-Veg">Non-Veg</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="messageBox">
+            Message for the Couple
+          </label>
+          <textarea
+            id="messageBox"
+            name="messageBox"
+            class="form-textarea"
+            rows="4"
+            placeholder="Write your heartfelt wishes..."
+          ></textarea>
+        </div>
+
+        <div class="form-submit-container text-center">
+          <button
+            type="submit"
+            id="submitRsvpBtn"
+            class="btn btn-rosegold-solid btn-large"
+          >
+            <span class="btn-text">Send Message</span>
+          </button>
+
+          <p id="rsvpStatus" role="status" aria-live="polite"></p>
+        </div>
+
+      </form>
+
+      <div id="rsvpSuccessCard"
+           class="rsvp-success-card hidden"
+           role="alert"
+           style="display:none;">
+
+        <h3>Thank You for Your RSVP!</h3>
+        <p>Your response has been submitted.</p>
+
+        <button
+          type="button"
+          id="resetRsvpBtn"
+          class="btn btn-outline-rosegold"
+        >
+          Submit Another Response
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+const GOOGLE_SHEET_URL =
+  "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+const rsvpForm = document.getElementById("rsvpForm");
+const submitBtn = document.getElementById("submitRsvpBtn");
+const statusText = document.getElementById("rsvpStatus");
+const successCard = document.getElementById("rsvpSuccessCard");
+
+rsvpForm.addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  if (!rsvpForm.reportValidity()) return;
+
+  if (GOOGLE_SHEET_URL.includes("PASTE_YOUR")) {
+    statusText.textContent = "Google Sheets URL is not configured.";
+    return;
+  }
+
+  const attendance = document.getElementById(
+    "attendanceStatus"
+  ).value;
+
+  const formData = new URLSearchParams({
+    fullName: document.getElementById("fullName").value.trim(),
+    emailAddress: document.getElementById("emailAddress").value.trim(),
+    attendanceStatus: attendance,
+    guestCount: attendance === "no"
+      ? "0"
+      : document.getElementById("guestCount").value,
+    dietaryPreferences: document.getElementById(
+      "dietaryPreferences"
+    ).value,
+    messageBox: document.getElementById("messageBox").value.trim()
+  });
+
+  submitBtn.disabled = true;
+  submitBtn.querySelector(".btn-text").textContent = "Sending...";
+  statusText.textContent = "";
+
+  try {
+    await fetch(GOOGLE_SHEET_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: formData
+    });
+
+    // Request sent; no-cors cannot verify the sheet save.
+    rsvpForm.style.display = "none";
+    successCard.style.display = "block";
+    statusText.textContent = "RSVP sent.";
+
+  } catch (error) {
+    statusText.textContent =
+      "Submission failed. Please try again.";
+    console.error(error);
+
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.querySelector(".btn-text").textContent =
+      "Send Message";
+  }
+});
+
+document.getElementById("resetRsvpBtn").addEventListener(
+  "click",
+  function() {
+    rsvpForm.reset();
+    rsvpForm.style.display = "";
+    successCard.style.display = "none";
+    statusText.textContent = "";
+  }
+);
+</script>
   <!-- ========================================================
        FOOTER
        ======================================================== -->
