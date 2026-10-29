@@ -2891,8 +2891,8 @@ button, input, select, textarea {
     transition: none !important;
   }
 }
-.hero-subtext,
-.hero-invitation-subtext,
+/* .hero-subtext,
+.hero-invitation-subtext, */
 .section-desc,
 .section-eyebrow,
 .welcome-paragraph,
