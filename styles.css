@@ -2891,3 +2891,19 @@ button, input, select, textarea {
     transition: none !important;
   }
 }
+.hero-subtext,
+.hero-invitation-subtext,
+.section-desc,
+.section-eyebrow,
+.welcome-paragraph,
+.welcome-signature,
+.countdown-note,
+.timeline-desc,
+.timeline-location,
+.venue-address,
+.venue-desc,
+.rsvp-deadline,
+.footer-copy,
+.footer-disclaimer {
+    color: #4a3038 !important;
+}
